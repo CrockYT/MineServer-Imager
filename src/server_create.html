@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Server</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="server-create.css">
+</head>
+<body>
+    <div class="create-server">
+        <div class="nav-bar">
+            <button id="create-new" class="nav-button active">Create New</button>
+            <button id="import-server" class="nav-button">Import Server</button>
+            <button id="copy-server" class="nav-button">Copy Server</button>
+        </div>
+
+        <div id="create-new-content" class="tab-content">
+            <div class="server-group">
+                <h2>Main Server</h2>
+                <div class="server-options">
+                    <div class="server-option">
+                        <img src="assets/server-vanilla.png" alt="Vanilla" class="server-icon">
+                        <div class="server-info">
+                            <h3>Vanilla</h3>
+                            <p>いい感じの説明文</p>
+                        </div>
+                    </div>
+                    <div class="server-option">
+                        <img src="assets/server-spigot.png" alt="Spigot" class="server-icon">
+                        <div class="server-info">
+                            <h3>Spigot</h3>
+                            <p>いい感じの説明文</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="server-group">
+                <h2>Proxy Server</h2>
+                <div class="server-options">
+                    <div class="server-option">
+                        <img src="assets/server-bungeecord.png" alt="BungeeCord" class="server-icon">
+                        <div class="server-info">
+                            <h3>BungeeCord</h3>
+                            <p>いい感じの説明文</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="import-server-content" class="tab-content" style="display: none;">
+            <input type="file" id="config-file" accept=".mcsi">
+            <button id="import-btn">Import</button>
+        </div>
+
+        <div id="copy-server-content" class="tab-content" style="display: none;">
+            <p>Copy Server functionality is not yet implemented.</p>
+        </div>
+    </div>
+
+    <script src="server-create.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "name": "mineserverimager",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "MineServerImager - A tool for managing Minecraft servers",
+  "devDependencies": {
+    "electron": "^31.3.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.example.mineserverimager",
+    "files": [
+      "index.html",
+      "main.js",
+      "index.js",
+      "renderer.js",
+      "styles.css",
+      "server.html",
+      "server.css",
+      "server.js",
+      "server_create.html",
+      "server-create.js",
+      "server-create.css"
+    ],
+    "extraResources": [
+      {
+        "from": "assets/servers",
+        "to": "servers"
+      }
+    ],
+    "icon": "assets/icon.ico",
+    "nsis": {
+      "include": "installer.nsh",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "oneClick": false,
+      "perMachine": true
+    },
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}

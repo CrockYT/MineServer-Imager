@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Management</title>
+    <link rel="stylesheet" href="server.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="loading-content">
+            <h2>Loading...</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div id="error-message">
+        <div>
+            <h2>エラー</h2>
+            <p>ロード中に問題が発生しました。</p>
+            <button onclick="redirectToIndex()">戻る</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="#" id="menu-dashboard">Dash Board</a></li>
+                <li><a href="#" id="menu-setting">Setting</a></li>
+                <li><a href="#" id="menu-list">List</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div id="dashboard" class="tab-content">
+                <h2>Dash Board</h2>
+                <p>ここでは全サーバーの一括監視、起動、停止、再起動、設定、プラグインの管理、プレイヤーの表示、サーバー自体の設定、ファイルの表示などができます。</p>
+            </div>
+            <div id="setting" class="tab-content" style="display: none;">
+                <h2>Setting</h2>
+                <p>このセクションでは、ツールの MCSI 設定が行えます。</p>
+            </div>
+            <div id="list" class="tab-content" style="display: none;">
+                <div id="server-list"></div>
+                <div id="server-not-found" class="hidden">
+                    <h2>Server Not Found</h2>
+                    <p>おや、サーバーが見つかりませんでした。</p>
+                    <p>下のボタンからサーバーを作成してください⏬️</p>
+                    <button class="button" onclick="createServer()">Create Server</button></br>
+                    <img src="404-image.png" alt="404 Image">
+                </div>
+                <div id="search-container" class="hidden">
+                    <input type="text" id="search-box" placeholder="タグで検索...">
+                    <button class="button" onclick="searchServers()">Search</button>
+                </div>
+            </div>
+            <div id="create-server-content" class="tab-content" style="display: none;"></div>
+        </div>
+    </div>
+    <script src="server.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* 全体の背景色とフォントカラー */
+body {
+    background-color: #1e1e1e; /* ナイトテーマの背景色 */
+    color: #e0e0e0; /* ナイトテーマのテキスト色 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* サーバー作成コンテナ */
+.create-server {
+    padding: 20px;
+    margin-top: 60px; /* ナビゲーションバーの高さ分だけ余白を追加 */
+}
+
+/* ナビゲーションバー */
+.nav-bar { /* ナビゲーションバーを固定 */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333; /* ナビゲーションバーの背景色 */
+    padding: 10px;
+    border-radius: 10px; /* 下側にだけ角を丸める */
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000; /* 他の要素よりも前面に表示 */
+}
+
+/* ナビゲーションボタン */
+.nav-button {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.nav-button.active {
+    background-color: #555; /* 選択中のボタンの背景色 */
+    border-radius: 5px;
+}
+
+.nav-button:hover {
+    background-color: #444; /* ホバー時の背景色 */
+}
+
+/* タブコンテンツ */
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px; /* ナビゲーションバーの下にコンテンツを表示 */
+}
+
+/* サーバーオプション */
+.server-group {
+    margin-bottom: 40px;
+}
+
+.server-options {
+    display: flex;
+    gap: 20px; /* アイテム間のスペース */
+    flex-wrap: wrap;
+}
+
+.server-option {
+    background-color: #2b2b2b; /* アイテムの背景色 */
+    border-radius: 10px;
+    padding: 20px;
+    width: 140px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.server-icon {
+    width: 80px; /* アイコンのサイズ */
+    height: 80px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.server-info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.server-info p {
+    font-size: 14px;
+}
+
+/* インポートサーバータブ */
+#import-server-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#import-btn {
+    margin-top: 10px;
+}
+
+/* コピーサーバータブ */
+#copy-server-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* スクロールバーの背景を透明にする */
+}
+
+/* スクロールバーのトラック部分も非表示にする */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* スクロールバーのスライダー部分も非表示にする */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
